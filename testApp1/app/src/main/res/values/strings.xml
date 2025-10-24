@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">testApp1</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="multiply">*</string>
+    <string name="divide">/</string>
+    <string name="can_t_divide_by_0">Can\'t divide by 0</string>
+</resources>
