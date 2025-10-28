@@ -9,26 +9,28 @@
     android:background="@drawable/background"
     tools:context=".MainActivity">
 
+    <!-- Password Field -->
     <ImageView
         android:id="@+id/imgLogo"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_marginTop="104dp"
+        android:layout_width="105dp"
+        android:layout_height="98dp"
+        android:layout_marginTop="28dp"
         android:contentDescription="@string/app_logo"
-        android:src="@drawable/logo"
+        android:src="@drawable/logo1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_goneMarginTop="80dp"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_goneMarginTop="80dp" />
 
-    <!-- Password Field -->
+    <!-- Sign In Button -->
+
     <EditText
         android:id="@+id/edtEmail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="40dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="8dp"
         android:background="@android:color/transparent"
         android:hint="@string/enter_your_email"
         android:inputType="textEmailAddress"
@@ -36,18 +38,16 @@
         android:textColor="#fff"
         android:textColorHint="#888888"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.625"
+        app:layout_constraintHorizontal_bias="0.35"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imgLogo" />
-
-    <!-- Sign In Button -->
 
     <EditText
         android:id="@+id/edtPassword"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="40dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="8dp"
         android:background="@android:color/transparent"
         android:hint="@string/enter_your_password"
         android:inputType="textPassword"
@@ -55,58 +55,74 @@
         android:textColor="#fff"
         android:textColorHint="#888888"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.625"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/edtEmail" />
+
+    <!-- Sign In with Google -->
+
+    <!-- Create Account Text -->
 
     <Button
         android:id="@+id/btnSignIn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="80dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginStart="216dp"
+        android:layout_marginTop="14dp"
         android:text="@string/sign_in"
         android:textAllCaps="true"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/edtPassword" />
 
-    <!-- Sign In with Google -->
-    <Button
+<!--    <Button-->
+<!--        android:id="@+id/btnGoogle"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="14dp"-->
+<!--        android:background="#000"-->
+<!--        android:text="@string/sign_in_with_google"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.408"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/btnSignIn"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/edtPassword"-->
+<!--        />-->
+
+    <!-- Forgot Password -->
+
+    <com.google.android.gms.common.SignInButton
         android:id="@+id/btnGoogle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/sign_in_with_google"
-        android:background="#000"
-        android:layout_marginTop="20dp"
-        app:layout_constraintTop_toBottomOf="@id/btnSignIn"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.365"
+        app:layout_constraintStart_toEndOf="@+id/btnSignIn"
+        app:layout_constraintTop_toBottomOf="@+id/edtPassword" />
 
-    <!-- Create Account Text -->
     <TextView
         android:id="@+id/tvCreateAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
         android:text="@string/do_not_have_an_account"
         android:textColor="#FFFFFF"
         android:textSize="14sp"
-        android:layout_marginTop="25dp"
-        app:layout_constraintTop_toBottomOf="@id/btnGoogle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.082"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/btnGoogle" />
 
-    <!-- Forgot Password -->
     <TextView
         android:id="@+id/tvForgotPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:text="@string/forgot_your_password"
         android:textColor="#A8FFBF"
         android:textSize="14sp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintTop_toBottomOf="@id/tvCreateAccount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.931"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/btnGoogle" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
