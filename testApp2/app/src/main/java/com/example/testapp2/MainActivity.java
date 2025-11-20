@@ -47,5 +47,6 @@ public class MainActivity extends AppCompatActivity {
                    rightDice.setImageResource(diceArray[num2]);
                }
             });
+
     }
 }
