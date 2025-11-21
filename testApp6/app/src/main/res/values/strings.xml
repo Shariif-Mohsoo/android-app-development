@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">testApp6</string>
+    <string name="go_to_second_activity">Go to second activity</string>
+    <string name="_0">0</string>
+    <string name="_1">1</string>
+    <string name="go_to_first_activity">Go to first activity</string>
 </resources>
