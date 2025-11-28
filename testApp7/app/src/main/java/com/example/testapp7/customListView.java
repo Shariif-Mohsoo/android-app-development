@@ -1,7 +1,6 @@
 package com.example.testapp7;
 
 import android.os.Bundle;
-import android.widget.ListView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,22 +8,16 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class MainActivity extends AppCompatActivity {
-    String [] fruitList = {"Apple","Banana","Grapes","Orange"};
-    int [] fruitImages = {R.drawable.apple,R.drawable.banana,R.drawable.grapes,R.drawable.orange};
-    ListView listView;
+public class customListView extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_custom_list_view);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-
-            listView = findViewById(R.id.customListView);
-            customBaseAdapter   baseAdapter = new customBaseAdapter(this,fruitList,fruitImages);
-            listView.setAdapter(baseAdapter);
             return insets;
         });
     }
